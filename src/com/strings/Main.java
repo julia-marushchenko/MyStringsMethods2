@@ -1,4 +1,4 @@
-// Class String and its methods
+// Immutable class String and its methods
 
 package com.strings;
 
@@ -8,35 +8,22 @@ public class Main {
     // Main method to run java program
     public static void main(String[] args) {
 
-        // Method equals(Object anotherObject)
-        boolean out = "String".equals("String"); // returns true
-        boolean out1 = "String".equals("string"); // returns false
+        // Creating String object
+        String str = new String("I am String");
 
-        // Printing out and out1 to console
-        System.out.println(out);
-        System.out.println(out1);
+        // Printing to console original string
+        System.out.println("Original string: " + str);
 
-        // Method equalsIgnoreCase(String anotherString)
-        boolean out2 = "String".equalsIgnoreCase("String"); // returns true
-        boolean out3 = "String".equalsIgnoreCase("string"); // returns true
+        // Using toLowerCase() to convert all characters to lower case
+       str = str.toLowerCase();
 
-        // Printing out and out1 to console
-        System.out.println(out2);
-        System.out.println(out3);
+        // Printing to console transformed string
+        System.out.println("Transformed one time string: " + str);
 
-        // Method int compareTo(String anotherString)
-        // Creating strings to compare
-        String str = new String("World");
-        String str1 = new String("world");
+        // Using toUpperCase() to convert all characters to upper case
+        str = str.toUpperCase();
 
-        // Returns < 0
-        System.out.println(str.compareTo(str1));
-
-        // Returns > 0
-        System.out.println(str1.compareTo(str));
-
-        // Comparing the same strings with result 0
-        System.out.println(str.compareTo(str));
-
+        // Printing to console transformed string
+        System.out.println("Transformed second time string: " + str);
     }
 }
